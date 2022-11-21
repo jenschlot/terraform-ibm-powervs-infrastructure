@@ -83,7 +83,7 @@ locals {
     no_proxy_env     = "161.0.0.0/8"
   }
 
-  storage_config  = {
+  storage_config = {
     names      = "data"
     disks_size = "2000,2000"
     counts     = "2"
@@ -120,8 +120,8 @@ module "powervs_infra" {
 }
 
 module "power_instance" {
-  source = "git::https://github.com/terraform-ibm-modules/terraform-ibm-powervs-sap.git//submodules/power_instance?ref=v3.1.0"
-  depends_on = [module.powervs_infra]
+  source                       = "git::https://github.com/terraform-ibm-modules/terraform-ibm-powervs-sap.git//submodules/power_instance?ref=v3.1.0"
+  depends_on                   = [module.powervs_infra]
   powervs_zone                 = var.powervs_zone
   powervs_resource_group_name  = "Default"
   powervs_workspace_name       = "${local.slz_output[0].prefix.value}-${var.powervs_zone}-power-workspace"
@@ -135,5 +135,3 @@ module "power_instance" {
   powervs_networks             = [var.powervs_management_network["name"], var.powervs_backup_network["name"]]
   powervs_storage_config       = local.storage_config
 }
-
-
