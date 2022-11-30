@@ -47,6 +47,8 @@ locals {
   inet_svs_ip    = [for vsi in local.slz_output[0].vsi_list.value : vsi.ipv4_address if vsi.name == "${local.slz_output[0].prefix.value}-inet-svs-1"][0]
   private_svs_ip = [for vsi in local.slz_output[0].vsi_list.value : vsi.ipv4_address if vsi.name == "${local.slz_output[0].prefix.value}-private-svs-1"][0]
   squid_port     = "3128"
+  prefix         = var.prefix != null && var.prefix != "" ? var.prefix : local.slz_output[0].prefix.value
+
 }
 
 locals {
@@ -100,7 +102,7 @@ module "powervs_infra" {
   powervs_workspace_name      = "${local.slz_output[0].prefix.value}-${var.powervs_zone}-power-workspace"
   tags                        = ["PowerVS", "readyImage", "quickstart"]
   powervs_image_names         = var.powervs_image_names
-  powervs_sshkey_name         = "${local.slz_output[0].prefix.value}-${var.powervs_zone}-ssh-pvs-key"
+  powervs_sshkey_name         = "${local.prefix}-${var.powervs_zone}-ssh-pvs-key"
   ssh_public_key              = local.slz_output[0].ssh_public_key.value
   ssh_private_key             = var.ssh_private_key
   powervs_management_network  = var.powervs_management_network

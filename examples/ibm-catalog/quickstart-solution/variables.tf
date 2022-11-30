@@ -30,6 +30,12 @@ variable "powervs_image_names" {
   default     = ["SLES15-SP3-SAP", "SLES15-SP3-SAP-NETWEAVER", "RHEL8-SP4-SAP", "RHEL8-SP4-SAP-NETWEAVER"]
 }
 
+variable "prefix" {
+  description = "Prefix for resources to be deployed"
+  type        = string
+  default     = "quickstart"
+}
+
 variable "ready_image_name" {
   description = "Image to be deployed"
   type        = string
