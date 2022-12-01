@@ -26,7 +26,7 @@ Install a current version of the [IBM Secure Landing Zone](https://github.com/te
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_powervs_infra"></a> [powervs\_infra](#module\_powervs\_infra) | ../../.. | n/a |
+| <a name="module_powervs_infra"></a> [powervs\_infra](#module\_powervs\_infra) | ../../../.. | n/a |
 
 ## Resources
 

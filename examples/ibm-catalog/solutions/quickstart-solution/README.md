@@ -28,7 +28,7 @@ Install a current version of the [IBM Secure Landing Zone](https://github.com/te
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_power_instance"></a> [power\_instance](#module\_power\_instance) | git::https://github.com/terraform-ibm-modules/terraform-ibm-powervs-sap.git//submodules/power_instance | v3.1.0 |
-| <a name="module_powervs_infra"></a> [powervs\_infra](#module\_powervs\_infra) | ../../.. | n/a |
+| <a name="module_powervs_infra"></a> [powervs\_infra](#module\_powervs\_infra) | ../../../.. | n/a |
 
 ## Resources
 
