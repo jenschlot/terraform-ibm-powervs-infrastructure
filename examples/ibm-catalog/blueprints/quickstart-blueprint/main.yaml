@@ -8,7 +8,7 @@ inputs:
     description: Over rides default values with custom json
     type: string
     optional: true
-    max_length: 50KB
+    max_length: 50000
     default: |
       {
       "access_groups": [],
@@ -756,7 +756,7 @@ inputs:
     description: Private SSH key
     type: string
     required: true
-    max_length: 50KB
+    max_length: 50000
   - name: region
     type: string
     description: Region where VPC landing zone will be created
