@@ -803,10 +803,10 @@ modules:
   - name: secure-infrastructure
     module_type: terraform
     source:
-      source_type: ibm_cloud_catalog
+      source_type: catalog
       catalog:
         catalog_id: "5aeec28a-8658-4f07-9cf6-2a27400c4696"
-        offering_name: "Secure infrastructure on VPC for regulated industries"
+        offering_name: "2fad0f03-82dc-4335-9fd2-5745b1266a7e"
         offering_version: "v1.10.3"
     inputs:
       - name: ibmcloud_api_key
@@ -829,10 +829,10 @@ modules:
     layer: infrastructure
     module_type: terraform
     source:
-      source_type: ibm_cloud_catalog
+      source_type: catalog
       catalog:
         catalog_id: "1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc"
-        offering_name: "Power infrastructure for regulated industries"
+        offering_id: "07e92c55-6a5b-4f3d-aa0e-30212e108af9"
         offering_version: "v5.2.0"
     inputs:
       - name: prerequisite_workspace_id
@@ -856,9 +856,9 @@ modules:
     layer: software
     module_type: terraform
     source:
-      source_type: github
+      source_type: git
       git:
-        git_repo_url: "https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/tree/arnold-readyimage/examples/ibm-catalog/modules/powervs-instance"
+        git_repo_url: "https://github.com/terraform-ibm-modules/terraform-ibm-powervs-infrastructure/tree/arnold-readyimage/examples/ibm-catalog/modules/powervs-instance-module"
     inputs:
       - name: prerequisite_workspace_id
         value: $module.powervs-infrastructure.outputs.powervs_workspace_name_id

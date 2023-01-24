@@ -62,18 +62,3 @@ output "schematics_workspace_id" {
   description = "ID of the IBM Cloud Schematics workspace. Returns null if not ran in Schematics"
   value       = var.IC_SCHEMATICS_WORKSPACE_ID
 }
-
-output "connection_command" {
-  description = "1. Connect to ReadyImage using following command. Note: If you use a non-default path to your SSH key, you must specify it over following SSH client parameter: '-i <path_to_your_SSH_private_key>'."
-  value       = "ssh -A -o ServerAliveInterval=60 -o ServerAliveCountMax=600 -o ProxyCommand=\"ssh -W %h:%p root@${module.powervs_infra.access_host_or_ip}\" root@${module.power_instance.instance_mgmt_ip}"
-}
-
-output "proxy_config" {
-  description = "2. Configure proxy to reach public internet."
-  value       = "export http_proxy=http://${module.powervs_infra.proxy_host_or_ip_port}:3128; export https_proxy= http://${module.powervs_infra.proxy_host_or_ip_port}:3128; export HTTP_proxy= http://${module.powervs_infra.proxy_host_or_ip_port}:3128;export HTTPS_proxy =http://${module.powervs_infra.proxy_host_or_ip_port}:3128"
-}
-
-output "success_message" {
-  description = "Enjoy"
-  value       = "Enjoy! :-)"
-}

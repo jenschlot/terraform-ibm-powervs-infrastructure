@@ -100,8 +100,8 @@ statement instead the previous block.
 ## Examples
 
 - [ Basic example for Power infrastructure for regulated industries](examples/basic)
-- [ IBM Cloud catalog example for Power infrastructure for regulated industries](examples/ibm-catalog/solutions/quickstart-solution)
-- [ IBM Cloud catalog example for Power infrastructure for regulated industries](examples/ibm-catalog/solutions/standard-solution)
+- [ IBM Cloud catalog example for Power infrastructure for regulated industries](examples/ibm-catalog/deployable-architectures/powervs-workspace-quickstart)
+- [ IBM Cloud catalog example for Power infrastructure for regulated industries](examples/ibm-catalog/deployable-architectures/powervs-workspace-standard)
 - [ Standard example for Power infrastructure for regulated industries](examples/standard)
 <!-- END EXAMPLES HOOK -->
 
