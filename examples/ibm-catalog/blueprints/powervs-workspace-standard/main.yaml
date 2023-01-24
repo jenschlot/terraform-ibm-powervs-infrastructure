@@ -1,6 +1,6 @@
 name: "Ready Image on secure Power Virtual Servers"
 # yaml-language-server: $schema=https://raw.githubusercontent.com/Cloud-Schematics/vscode-blueprint-schema/master/blueprint_schema.json
-schema_version: "1.0.0"
+schema_version: "1.0.2"
 description: "Solution to deploy Ready Image on secure Power Virtual Servers"
 type: "blueprint"
 inputs:
