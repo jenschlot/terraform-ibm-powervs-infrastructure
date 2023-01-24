@@ -808,10 +808,11 @@ modules:
     source:
       source_type: catalog
       catalog:
-        catalog_id: "5aeec28a-8658-4f07-9cf6-2a27400c4696"
+        catalog_id: "7df1e4ca-d54c-4fd0-82ce-3d13247308cd"
         offering_id: "2fad0f03-82dc-4335-9fd2-5745b1266a7e"
         offering_name: "slz-vpc-with-vsis"
-        offering_version: "v1.6.0"
+        offering_version: "v1.13.3"
+        offering_version_flavour_name: "standard"
     inputs:
       - name: ibmcloud_api_key
         value: $blueprint.ibmcloud_api_key
