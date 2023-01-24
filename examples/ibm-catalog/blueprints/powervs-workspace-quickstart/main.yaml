@@ -811,8 +811,7 @@ modules:
         catalog_id: "5aeec28a-8658-4f07-9cf6-2a27400c4696"
         offering_id: "2fad0f03-82dc-4335-9fd2-5745b1266a7e"
         offering_name: "slz-vpc-with-vsis"
-        offering_version: "v1.13.3"
-        offering_version_flavour_name: "standard"
+        offering_version: "v1.6.0"
     inputs:
       - name: ibmcloud_api_key
         value: $blueprint.ibmcloud_api_key
@@ -840,7 +839,6 @@ modules:
         offering_id: "07e92c55-6a5b-4f3d-aa0e-30212e108af9"
         offering_name: "terraform-ibm-powervs-catalog-powervs-sap-infrastructure"
         offering_version: "v5.2.0"
-        offering_version_flavour_name: "quickstart"
     inputs:
       - name: prerequisite_workspace_id
         value: $module.secure-infrastructure.outputs.schematics_workspace_id
