@@ -7,6 +7,7 @@ inputs:
   - name: override_json_string
     description: Over rides default values with custom json
     type: string
+    max_length: 30000
     optional: true
     default: |
       {
@@ -741,6 +742,7 @@ inputs:
   - name: ssh_public_key
     description: Public SSH key for VSI
     type: string
+    max_length: 30000
     required: true
   - name: powervs_zone
     description: PowerVS location
@@ -754,6 +756,7 @@ inputs:
   - name: ssh_private_key
     description: Private SSH key
     type: string
+    max_length: 30000
     required: true
   - name: region
     type: string
@@ -807,7 +810,7 @@ modules:
       catalog:
         catalog_id: "5aeec28a-8658-4f07-9cf6-2a27400c4696"
         offering_id: "2fad0f03-82dc-4335-9fd2-5745b1266a7e"
-        offering_name: "Secure infrastructure on VPC for regulated industries"
+        offering_name: "slz-vpc-with-vsis"
         offering_version: "v1.10.3"
     inputs:
       - name: ibmcloud_api_key
@@ -834,7 +837,7 @@ modules:
       catalog:
         catalog_id: "1082e7d2-5e2f-0a11-a3bc-f88a8e1931fc"
         offering_id: "07e92c55-6a5b-4f3d-aa0e-30212e108af9"
-        offering_name: "Power infrastructure for regulated industries"
+        offering_name: "terraform-ibm-powervs-catalog-powervs-sap-infrastructure"
         offering_version: "v5.2.0"
     inputs:
       - name: prerequisite_workspace_id
