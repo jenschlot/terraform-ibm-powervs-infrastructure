@@ -806,7 +806,7 @@ modules:
       source_type: catalog
       catalog:
         catalog_id: "5aeec28a-8658-4f07-9cf6-2a27400c4696"
-        offering_name: "2fad0f03-82dc-4335-9fd2-5745b1266a7e"
+        offering_id: "2fad0f03-82dc-4335-9fd2-5745b1266a7e"
         offering_version: "v1.10.3"
     inputs:
       - name: ibmcloud_api_key
