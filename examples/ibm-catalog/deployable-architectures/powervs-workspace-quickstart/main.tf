@@ -111,6 +111,7 @@ module "powervs_infra" {
 
 module "power_instance" {
   source                       = "git::https://github.com/terraform-ibm-modules/terraform-ibm-powervs-sap.git//submodules/power_instance?ref=v3.1.0"
+  depends_on                   = [module.powervs_infra]
   powervs_zone                 = var.powervs_zone
   powervs_resource_group_name  = var.powervs_resource_group_name
   powervs_workspace_name       = "${local.slz_output[0].prefix.value}-${var.powervs_zone}-power-workspace"
