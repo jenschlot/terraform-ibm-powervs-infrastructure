@@ -70,6 +70,12 @@ variable "reuse_cloud_connections" {
   default     = false
 }
 
+variable "cloud_connection_name_prefix" {
+  description = "If null or empty string, default cloud connection name will be <zone>-conn-1."
+  type        = string
+  default     = null
+}
+
 variable "cloud_connection_count" {
   description = "Required number of Cloud connections to create or reuse. The maximum number of connections is two per location."
   type        = number
@@ -157,16 +163,20 @@ variable "ntp_forwarder_config" {
 }
 
 variable "nfs_config" {
-  description = "Configuration for the shared NFS file system (for example, for the installation media)."
+  description = "Configuration for the shared NFS file system (for example, for the installation media). Creates a filesystem of disk size specified, mounts and NFS exports it."
   type = object({
     nfs_enable        = bool
     server_host_or_ip = string
-    nfs_directory     = string
+    nfs_file_system = list(object({
+      name       = string
+      mount_path = string
+      size       = number
+    }))
   })
   default = {
     "nfs_enable"        = "false"
     "server_host_or_ip" = ""
-    "nfs_directory"     = "/nfs"
+    "nfs_file_system"   = [{ name : "nfs", mount_path : "/nfs", size : 1000 }]
   }
 }
 
@@ -177,7 +187,7 @@ variable "perform_proxy_client_setup" {
       squid_client_ips = list(string)
       squid_server_ip  = string
       squid_port       = string
-      no_proxy_env     = string
+      no_proxy_hosts   = string
     }
   )
   default = null
