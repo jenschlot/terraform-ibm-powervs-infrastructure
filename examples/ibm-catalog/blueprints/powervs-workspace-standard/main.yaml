@@ -888,7 +888,8 @@ inputs:
     description: List of Images to be imported into cloud account from catalog images
     optional: true
     type: list(string)
-    value: ["SLES15-SP3-SAP", "SLES15-SP3-SAP-NETWEAVER", "RHEL8-SP4-SAP", "RHEL8-SP4-SAP-NETWEAVER"]
+    value: |
+      ["SLES15-SP3-SAP", "SLES15-SP3-SAP-NETWEAVER", "RHEL8-SP4-SAP", "RHEL8-SP4-SAP-NETWEAVER"]
 modules:
   - name: secure-infrastructure
     module_type: terraform
