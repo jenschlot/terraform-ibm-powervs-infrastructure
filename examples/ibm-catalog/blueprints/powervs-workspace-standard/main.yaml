@@ -7,6 +7,7 @@ inputs:
   - name: override_json_string
     description: Over rides default values with custom json
     type: string
+    max_length: 30000
     optional: true
     default: |
       {
@@ -748,6 +749,7 @@ inputs:
   - name: ssh_private_key
     description: Private SSH key
     type: string
+    max_length: 30000
     required: true
   - name: region
     type: string
