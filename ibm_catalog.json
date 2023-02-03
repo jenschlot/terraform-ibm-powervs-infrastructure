@@ -5,7 +5,7 @@
             "label": "Power infrastructure for regulated industries",
             "flavors": [
                 {
-                    "label": "Standard",
+                    "label": "PowerVS workspace only",
                     "name": "standard",
                     "working_directory": "examples/ibm-catalog/deployable-architectures/powervs-workspace-standard",
                     "usage": "module \"power-infrastructure\" {\n  source = \"https://cm.globalcatalog.cloud.ibm.com/api/v1-beta/offering/source//examples/ibm-catalog/deployable-architectures/powervs-workspace-standard?archive=tgz&kind=terraform&name=terraform-ibm-powervs-catalog-powervs-sap-infrastructure&version=2.0.9\"\n  prerequisite_workspace_id   = var.prerequisite_workspace_id\n  powervs_zone                = var.powervs_zone\n  powervs_resource_group_name = var.powervs_resource_group_name\n  ssh_private_key             = var.ssh_private_key\n  ibmcloud_api_key            = var.ibmcloud_api_key\n}",
@@ -154,7 +154,7 @@
                     }
                 },
                 {
-                    "label": "Quickstart",
+                    "label": "PowerVS workspace with demo instance",
                     "name": "quickstart",
                     "working_directory": "examples/ibm-catalog/deployable-architectures/powervs-workspace-quickstart",
                     "usage": "module \"power-infrastructure\" {\n  source = \"https://cm.globalcatalog.cloud.ibm.com/api/v1-beta/offering/source//examples/ibm-catalog/deployable-architectures/powervs-workspace-quickstart?archive=tgz&kind=terraform&name=terraform-ibm-powervs-catalog-powervs-sap-infrastructure&version=2.0.9\"\n  prerequisite_workspace_id   = var.prerequisite_workspace_id\n  powervs_zone                = var.powervs_zone\n  powervs_resource_group_name = var.powervs_resource_group_name\n  ssh_private_key             = var.ssh_private_key\n  ibmcloud_api_key            = var.ibmcloud_api_key\n}",
@@ -284,7 +284,7 @@
                     }
                 },
                 {
-                    "label": "BP-Standard",
+                    "label": "PowerVS workspace only",
                     "name": "bp-standard",
                     "working_directory": "examples/ibm-catalog/blueprints/powervs-workspace-standard",
                     "usage": "module \"power-infrastructure\" {\n  source = \"https://cm.globalcatalog.cloud.ibm.com/api/v1-beta/offering/source//examples/ibm-catalog/blueprints/powervs-workspace-standard?archive=tgz&kind=terraform&name=terraform-ibm-powervs-catalog-powervs-sap-infrastructure&version=2.0.9\"\n  prerequisite_workspace_id   = var.prerequisite_workspace_id\n  powervs_zone                = var.powervs_zone\n  powervs_resource_group_name = var.powervs_resource_group_name\n  ssh_private_key             = var.ssh_private_key\n  ibmcloud_api_key            = var.ibmcloud_api_key\n}",
@@ -414,7 +414,7 @@
                     }
                 },
                 {
-                    "label": "BP-Quickstart",
+                    "label": "PowerVS workspace with demo instance",
                     "name": "bp-quickstart",
                     "working_directory": "examples/ibm-catalog/blueprints/powervs-workspace-quickstart",
                     "usage": "module \"power-infrastructure\" {\n  source = \"https://cm.globalcatalog.cloud.ibm.com/api/v1-beta/offering/source//examples/ibm-catalog/blueprints/powervs-workspace-quickstart?archive=tgz&kind=terraform&name=terraform-ibm-powervs-catalog-powervs-sap-infrastructure&version=2.0.9\"\n  prerequisite_workspace_id   = var.prerequisite_workspace_id\n  powervs_zone                = var.powervs_zone\n  powervs_resource_group_name = var.powervs_resource_group_name\n  ssh_private_key             = var.ssh_private_key\n  ibmcloud_api_key            = var.ibmcloud_api_key\n}",
